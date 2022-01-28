@@ -1,9 +1,9 @@
 require 'sinatra'
 
 get '/' do
-  erb :index
+  erb :contact
 end
 
 post '/' do
-  erb :sent
+  erb :complete
 end

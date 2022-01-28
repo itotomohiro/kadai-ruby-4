@@ -40,10 +40,37 @@
         <h1 class="mt-4 pb-4 border-bottom">送信完了</h1>
         <p>ありがとうございました。送信を受け付けました。</p>
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
+        
+        <h2 class="mt-4 pb-4 border-bottom">送信内容</h2>
         <div class="text-center mb-4">
-            
+
+            <table class="mt-4 table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <td>会社名</td>
+                        <td><%= params['company'] %></td>
+                    </tr>
+                    <tr>
+                        <td>氏名</td>
+                        <td><%= params['name'] %></td>
+                    </tr>
+                    <tr>
+                        <td>メール</td>
+                        <td><%= params['mail'] %></td>
+                    </tr>
+                    <tr>
+                        <td>電話番号</td>
+                        <td><%= params['tel'] %></td>
+                    </tr>
+                    <tr>
+                        <td>内容</td>
+                        <td><%= params['content'].gsub(/\r\n|\r|\n/, "<br>") %></td>
+                    </tr>
+                </tbody>
+            </table>
+                
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
-            <a href="contact.html" class="btn btn-success">戻る</a>
+            <a href="/" class="btn btn-success">戻る</a>
             
         </div>
     </div>
